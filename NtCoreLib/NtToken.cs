@@ -1818,6 +1818,15 @@ public sealed class NtToken : NtObjectWithDuplicateAndInfo<NtToken, TokenAccessR
         }
     }
 
+    /// <summary>
+    /// Query if the token is an AppSilo (means it has the AppSilo capability).
+    /// </summary>
+    public bool AppSilo => Query<uint>(TokenInformationClass.TokenIsAppSilo) != 0;
+
+    /// <summary>
+    /// Query if the token is in learning mode.
+    /// </summary>
+    public bool LearningMode => Query<uint>(TokenInformationClass.TokenLearningMode) != 0;
     #endregion
 
     #region Static Methods

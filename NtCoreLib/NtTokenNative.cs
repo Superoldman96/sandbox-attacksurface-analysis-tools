@@ -82,7 +82,9 @@ public enum TokenInformationClass
     TokenChildProcessFlags = 45,
     TokenIsLessPrivilegedAppContainer = 46,
     TokenIsSandboxed = 47,
-    TokenOriginatingProcessTrustLevel = 48,
+    TokenIsAppSilo = 48,
+    TokenLoggingInformation = 49,
+    TokenLearningMode = 50,
 }
 
 [Flags]
